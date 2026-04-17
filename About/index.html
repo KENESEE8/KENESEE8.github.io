@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenechukwu Omalu- About</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+            <nav>
+            <div class="nav-left">
+        <a href="javascript:history.back()">
+            <div class="nav-item">
+               <p>Return</p>
+            </div>
+            </a>
+        </div>
+
+
+        </nav>
+
+
+        <div class="spacer-1"></div>
+
+        <div class="about">
+<div class="follow-up-text">
+    <p>
+        Kenechukwu Omalu is an actor, model, and performer whose work is rooted in presence, expression, and controlled emotion. 
+        He moves between screen and stage with a natural sense of ease, bringing depth and authenticity to every role.
+    </p>
+</div>
+
+<div class="follow-up-text">
+    <p>
+        His approach is defined by <span class="serif">clarity</span>, <span class="serif">intention</span>, and restraint — 
+        where performance is not exaggerated, but carefully felt.
+    </p>
+</div>
+
+<div class="follow-up-text">
+    <p>
+        Whether in front of a camera or in live performance, he carries a quiet confidence — 
+        shaped by <span class="serif">stillness</span>, <span class="serif">focus</span>, and an instinct for truth in expression.
+    </p>
+</div>
+        </div>
+
+
+
+        <div class="dot"></div>
+
+        <div class="center_image">
+            <img src="8.JPG" alt="" srcset="">
+        </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".nav-item");
+
+    const startDelay = 50; // 👈 delay before animation starts
+
+    setTimeout(() => {
+        items.forEach((item, i) => {
+            setTimeout(() => {
+                item.classList.add("show");
+            }, i * 200);
+        });
+    }, startDelay);
+});
+</script>
+    
+</body>
+</html>

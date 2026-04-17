@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenechukwu Omalu - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="first">
+        <nav>
+            <div class="nav-left">
+            <div class="nav-item">
+               <p>Port<span class="serif">folio</span> ‘26</p>
+            </div>
+            </div>
+
+            <div class="nav-right">
+<a href="/About/">
+    <div class="nav-item">
+        <p>About</p>
+    </div>
+</a>
+
+<a href="/Gallery/">
+    <div class="nav-item">
+        <p>Gallery</p>
+    </div>
+</a>
+
+<a href="/Contact/">
+    <div class="nav-item">
+        <p>Contact</p>
+    </div>
+</a>
+                
+            </div>
+
+            <div class="nav-rii">
+                <p></p>
+            </div>
+        </nav>
+
+        <div class="title-text">
+        <div class="nav-item">
+            <p>Omalu.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="next">
+        <div class="date">
+
+            <div class="nav-item">
+                <p>(01)</p>
+            </div>
+
+        </div>
+        <div class="next-inner">
+            <img src="1.jpg" alt="" srcset="">
+        </div>
+
+        <div class="next-inner2">
+            <img src="2.jpg" alt="" srcset="">
+        </div>
+
+        
+        <div class="next-inner3">
+            <img src="3.jpg" alt="" srcset="">
+        </div> 
+    </div>
+
+    <div class="spacer-1"></div>
+
+    <div class="follow-up">
+        <div class="follow-up-text">
+<p>
+  <span class="serif">Omalu</span>, pronounced 
+  <span class="serif">‘ò.má.lù’</span>, is an Igbo word that carries a sense of 
+  <span class="serif">ease</span>, <span class="serif">goodness</span>, and alignment with what feels right. 
+  It reflects a <span class="serif">quiet confidence—</span>the idea of moving through life with 
+  <span class="serif">clarity</span>, and a calm intention.
+        </div>
+
+                <div class="follow-up-text f-u-t">
+<p>(A <span class="serif">Performer</span> in Truth)</p>
+        </div>
+    </div>
+
+
+    <div class="get-in-touch">
+        <a href="/Contact/">
+        <div class="git-inner">
+<p>Get in <span class="serif">touch</span></p>
+        </div>
+        </a>
+    </div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".nav-item");
+
+    const startDelay = 50; // 👈 delay before animation starts
+
+    setTimeout(() => {
+        items.forEach((item, i) => {
+            setTimeout(() => {
+                item.classList.add("show");
+            }, i * 200);
+        });
+    }, startDelay);
+});
+</script>
+    
+</body>
+</html>

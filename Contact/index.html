@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenechukwu Omalu- About</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+            <nav>
+            <div class="nav-left">
+        <a href="javascript:history.back()">
+            <div class="nav-item">
+               <p>Return</p>
+            </div>
+            </a>
+        </div>
+
+
+        </nav>
+
+<div class="contact-pane">
+    <div class="l-h-s">
+        <img src="2.jpg" alt="">
+    </div>
+
+
+    <div class="r-h-s">
+        <div class="bold-t nav-item">
+            <p>Get in <span class="serif">touch</span></p>
+        </div>
+
+        <div class="links">
+<a href="mailto:omalukene25@gmail.com">
+    <div class="nav-item">
+        <p>omalukene25@gmail.com</p>
+    </div>
+</a>
+
+
+<a href="https://instagram.com/omaluvision">
+<div class="nav-item">
+    <p>Instagram</p>
+</div>
+</a>
+
+
+<a href="https://tiktok.com/omaluvision">
+<div class="nav-item">
+    <p>Tiktok</p>
+</div>
+
+</a>
+        </div>
+
+        <div class="note">
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".nav-item");
+
+    const startDelay = 50; // 👈 delay before animation starts
+
+    setTimeout(() => {
+        items.forEach((item, i) => {
+            setTimeout(() => {
+                item.classList.add("show");
+            }, i * 200);
+        });
+    }, startDelay);
+});
+</script>
+    
+</body>
+</html>

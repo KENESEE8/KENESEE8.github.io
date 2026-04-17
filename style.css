@@ -1,0 +1,490 @@
+:root {
+    --bg: #dcdada;
+    --text: #000;
+    --visual-hidden: 0;
+}
+
+@font-face {
+    font-family: 's';
+    src: url(s.otf);
+}
+
+@font-face {
+    font-family: 's-bold';
+    src: url(a.otf);
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url(s-i.otf);
+}
+
+
+
+
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  font-size: calc(100vw / 1512 * 10);
+}
+
+
+
+body {
+  font-family:'s' ;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  width: 100vw;
+
+  height: 100vh;
+
+    }
+      
+
+
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+
+
+::selection{
+  background-color: #d8cabd;
+  color: #111;
+}
+
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.first{
+    height: 55rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.title-text{
+    position: absolute;
+    font-size: 30rem;
+    left: 4rem;
+    bottom: 4rem;
+}
+
+.title-text p{
+    letter-spacing: -4%;
+}
+
+nav{
+    position: fixed;
+    top: 4rem;
+    left: 4rem;
+    width: calc(100vw - 8rem);
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+
+    z-index: 999;
+}
+
+
+.nav-item{
+    overflow: hidden;
+}
+
+
+.nav-item {
+    perspective: 800px;
+}
+
+.nav-item p {
+    transform: translateY(4rem) rotateX(70deg);
+    transform-origin: bottom;
+    opacity: 0;
+
+    will-change: transform, opacity;
+    transition: transform 1.2s cubic-bezier(0.075, 0.82, 0.165, 1),
+                opacity 1.2s ease;
+}
+
+.nav-item.show p {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+}
+
+
+.nav-right{
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-rii{
+    height: 2rem;
+    width: 2rem;
+    background: var(--text);
+    border-radius: 50%;
+    margin-top: -.7rem;
+    scale: 0;
+    animation: zoom 1.75s 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+
+@keyframes zoom{
+    to{
+        scale: 1;
+    }
+}
+.next{
+    height: 80rem;
+    width: 100vw;
+    position: relative;
+}
+
+.date{
+    font-size: 3.9rem;
+    position: absolute;
+    right: 4rem;
+    font-family: 'serif';
+}
+
+
+.next-inner{
+    position: absolute;
+    left: 4rem;
+    height: 100%;
+    width: 85rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(4rem);
+    animation: opacity 1.75s 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+@keyframes opacity{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.next-inner img{
+    scale: 1.2;
+    animation: zoom 1.75s 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+
+@keyframes zoom{
+    to{
+        scale: 1;
+    }
+}
+
+.next-inner2{
+    position: absolute;
+    left: 70rem;
+    bottom: -15rem;
+    height: 40rem;
+    width: 40rem;
+    z-index: 9;
+    background: red;
+    opacity: 0.6;
+}
+
+.next-inner3{
+    position: absolute;
+    left: 95rem;
+    bottom: 15rem;
+    height: 25rem;
+    width: 25rem;
+    z-index: 9;
+    background: red;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+
+.next-inner3 img{
+
+    height: 155%;
+    position: absolute;
+}
+
+.serif{
+    font-family: 'serif';
+}
+
+.follow-up{
+    height: 57rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.9rem;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.follow-up-text{
+    width: 90rem;
+}
+
+.f-u-t p{
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+
+.follow-up-text p{
+    justify-content: center;
+}
+
+.spacer-1{
+    height: 15rem;
+}
+
+.get-in-touch{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.git-inner {
+    height: calc(50vh - 4rem);
+    width: calc(50vh - 4rem);
+    background: var(--text);
+    color: var(--bg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: all 0.75s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    border: 0.1rem dashed var(--text);
+}
+
+.git-inner p {
+    color: var(--bg); 
+    font-size: 3.9rem;
+    transition: all 0.75s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.git-inner:hover {
+    background: var(--bg);
+}
+
+.git-inner:hover p {
+    color: var(--text);
+}
+
+.hunnid{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    mix-blend-mode: difference;
+    font-size: 18rem;
+    animation: opacity 1.3s 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes opacity{
+    to {
+        opacity: 1;
+    }
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100vw;
+}
+
+.grid-item {
+    height: 45rem;
+    position: relative;
+    filter: grayscale();
+    transition: filter 0.3s ease;
+    opacity: 0;
+    animation: opacity 0.8s ease forwards;
+}
+
+
+.grid-item:nth-child(1) { animation-delay: 0ms; }
+.grid-item:nth-child(2) { animation-delay: 80ms; }
+.grid-item:nth-child(3) { animation-delay: 160ms; }
+.grid-item:nth-child(4) { animation-delay: 240ms; }
+.grid-item:nth-child(5) { animation-delay: 320ms; }
+.grid-item:nth-child(6) { animation-delay: 400ms; }
+.grid-item:nth-child(7) { animation-delay: 480ms; }
+.grid-item:nth-child(8) { animation-delay: 560ms; }
+.grid-item:nth-child(9) { animation-delay: 640ms; }
+.grid-item:nth-child(10) { animation-delay: 720ms; }
+.grid-item:nth-child(11) { animation-delay: 800ms; }
+.grid-item:nth-child(12) { animation-delay: 880ms; }
+
+.grid-item:hover{
+    filter: grayscale(0);
+}
+
+.contact-pane{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex; 
+    flex-direction: row-reverse;
+}
+
+.l-h-s{
+    height: 100vh;
+    width: 50vw;
+    filter: grayscale(0.5);
+    opacity: 0;
+    animation: opacity 1.75s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    overflow: hidden;
+}
+
+
+.l-h-s img{
+      scale: 1.2;
+    animation: zoom 1.75s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;  
+}
+
+.r-h-s{
+    width: 50vw;
+    height: 100vh;
+
+}
+
+
+.bold-t{
+    font-size: 10rem;
+    color: #000;
+    position: absolute;
+    left: 8rem;
+    top: 20rem;
+}
+
+
+
+.links{
+    position: absolute;
+    left: 12rem;
+    top: 35rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.note{
+    position: absolute;
+    left: 8rem;
+    bottom: 4rem;
+        height: 2rem;
+    width: 2rem;
+    background: var(--text);
+    border-radius: 50%;
+    scale: 0;
+    animation: zoom 1.75s 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.about{
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.9rem;
+    opacity: 0;
+
+    animation: opacity 1.75s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+
+.center_image{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 60rem;
+    width: 30rem;
+    filter: grayscale();
+    z-index: -1;
+    opacity: 0;
+    animation: opacity1 1.75s 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    overflow: hidden;
+}
+
+
+@keyframes opacity1{
+    to{
+        opacity: 0.5;
+
+    }
+}
+
+
+
+.center_image img{
+      scale: 1.2;
+    animation: zoom 1.75s 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;  
+}
+
+
+.dot{
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    height: 2rem;
+    width: 2rem;
+    background: var(--text);
+    border-radius: 50%;
+        scale: 0;
+    animation: zoom 1.75s 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
